@@ -1,45 +1,124 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+}
 main {
-    padding: 32px;
+
+    background-color: #f2f2f2;
 }
 .logo-icon {
+    margin-left: 20px;
     width: 50px;
     height: 50px;
-    background-image: url(https://picsum.photos/200/300);
+    background-image: url(../assets/file.png);
     background-size: cover;
     border-radius: 50%;
 }
+.logo-name {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-top: 12px;
+    margin-right: 850px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
 .nav-container {
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    background: linear-gradient(45deg, rgb(0, 183, 255), rgb(144, 0, 255));
 }
 nav>a {
+    background: rgb(174, 216, 198);
+    color: black;
     padding-left: 32px;
     padding-right: 32px;
     border: 1px solid;
+    text-decoration: none;
+}
+.banner-web {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    background-image: url(../assets/welcomeimage.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.banner-web::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1
+}
+#web-font-title {
+    font-size: 50px;
+    font-family: verdana;
+}
+#web-font-contents {
+    font-size: 25px;
+    font-family: "lucida console";
+    text-align: center;
+}
+#profile-font-title {
+    text-align: center;
+    font-size: 35px;
+}
+#portfolio-font-title {
+    text-align: center;
+    font-size: 35px;
+}
+#message-font-title {
+    text-align: center;
+    font-size: 35px;
+}
+#font-title {
+    font-family: verdana;
+}
+#font-contents {
+    font-family: "lucida console";
+}
+#username {
+    color: rgb(0, 0, 0);
 }
 .banner-container {
     height: 350px;
     width: 100%;
     border: 1px solid;
 }
+hr {
+    border: 1px solid black;
+}
 .profile-icon {
-    width: 100px;
-    height: 100px;
-    border: 1px solid;
+    width: 250px;
+    height: 250px;
     background-size: cover;
     border-radius: 50%;
 }
 .profile-1 {
-    background-image: url(../assets/);
+    background-image: url(../assets/profile1.jpg);
 }
 .profile-2 {
-    background-image: url(../assets/);
+    background-image: url(../assets/profile2.jpg);
 }
 .profile-3 {
-    background-image: url(../assets/);
+    background-image: url(../assets/profile3.jpg);
 }
 .profile-item {
+    font-size: 20px;
+    font-weight: bold;
     text-align: center;
     flex: 1;
     text-align: -webkit-center;
@@ -50,4 +129,79 @@ nav>a {
 }
 .divider {
     flex: 2;
+}
+.portfolio-icon {
+    width: 250px;
+    height: 2   50px;
+    background-color: white;
+    background-size: cover;
+    border-radius: 50%;
+    background-image: url(../assets/file.png);
+    float: left;
+    margin-right: 150px;
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.container {
+    display: flex;
+    margin-left: 25px;
+}
+form {
+    background-color: rgb(222, 222, 222);
+    width: 50%;
+    margin-right: 20px;
+    padding: 20px;
+    border: 3px solid #000000;
+    border-radius: 5px;
+}
+label {
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+}
+input[type="text"], input[type="date"], textarea {
+    background-color: #d7d7d7;
+    width: calc(100% - 160px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+textarea {
+    height: 100px;
+}
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #9c9c9c;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #6c6c6c;
+}
+.result {
+    background-color: rgb(222, 222, 222);
+    width: 50%;
+    padding: 20px;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    margin-right: 25px;
+}
+.result p {
+    margin: 5px 0;
+}
+footer {
+    background-color: #34484f;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
 }
