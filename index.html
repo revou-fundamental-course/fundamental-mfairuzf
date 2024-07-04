@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Revou - M.Fairuz F</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -12,24 +12,31 @@
     <header class="nav-container">
         <div class="logo-icon"></div>
         <div class="logo-name">IRU.</div>
-
-        <nav>
+        <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav id="nav-menu">
             <a href="#home">Home</a>
             <a href="#our-profile">Our Profile</a>
-            <a>Portfolio</a>
+            <a href="#about-us">About Us</a>
             <a href="#message-us">Message Us</a>
         </nav>
     </header>
-    <br>
-    <br>
-    <br>
     <main>
         <!--Home Content-->
+        <!--Banner Web-->
         <section class="banner-web" id="home">
+            <div class="slider">
+                <div class="slide" style="background-image: url('../assets/web-1.webp');"></div>
+                <div class="slide" style="background-image: url('../assets/web-2.jpg');"></div>
+                <div class="slide" style="background-image: url('../assets/web-3.jpg');"></div>
+            </div>
             <header>
                 <h1 id="web-font-title">Halo <span id="username">User</span>, Welcome to Website</h1>
                 <article>
-                    <p id="web-font-contents">Ini adalah Website</p>
+                    <p id="web-font-contents">Ini adalah sebuah Mini Project mengenai Website sebuah perusahaan</p>
                 </article>
             </header>
         </section>
@@ -44,32 +51,31 @@
                 <div class="profile-item">
                     <div class="profile-icon profile-1"></div>
                     <p>James Wilson</p>
+                    <h2>Program Director</h2>
                 </div>
 
                 <div class="profile-item">
                     <div class="profile-icon profile-2"></div>
                     <p>Ethan Adams</p>
+                    <h2>CEO</h2>
                 </div>
 
                 <div class="profile-item">
                     <div class="profile-icon profile-3"></div>
                     <p>Alexander Scott</p>
+                    <h2>Technical Manager</h2>
                 </div>
 
             </article>
-              
-        <!--Portfolio Content-->
-        <section class="banner-web">
-            <h1 id="portfolio-font-title">Portfolio</h1>
-        
-            <section class="portfolio-icon"></section>
+        </section>
+        <!--About Us Content-->
+        <section id="about-us">
+            <h1 id="about-us-font-title">About Us</h1>
             <article>
-                <p id="font-contents">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit molestiae sapiente laboriosam, enim tempore architecto aut dolore numquam recusandae quas totam in magnam vero laudantium eos ea, ipsa voluptatem vitae.</p>
-                <p id="font-contents">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit molestiae sapiente laboriosam, enim tempore architecto aut dolore numquam recusandae quas totam in magnam vero laudantium eos ea, ipsa voluptatem vitae.</p>
-                <p id="font-contents">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit molestiae sapiente laboriosam, enim tempore architecto aut dolore numquam recusandae quas totam in magnam vero laudantium eos ea, ipsa voluptatem vitae.</p>
-                <p id="font-contents">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit molestiae sapiente laboriosam, enim tempore architecto aut dolore numquam recusandae quas totam in magnam vero laudantium eos ea, ipsa voluptatem vitae.</p>
-                <p id="font-contents">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit molestiae sapiente laboriosam, enim tempore architecto aut dolore numquam recusandae quas totam in magnam vero laudantium eos ea, ipsa voluptatem vitae.</p>
-                <p id="font-contents">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit molestiae sapiente laboriosam, enim tempore architecto aut dolore numquam recusandae quas totam in magnam vero laudantium eos ea, ipsa voluptatem vitae.</p>
+                <h2> Selamat datang di IRU. !</h2>
+                <p>Di IRU., kami berkomitmen untuk menyediakan solusi energi yang handal dan berkelanjutan. Didirikan pada tahun 2000, misi kami adalah menjadi pemimpin dalam industri minyak dan gas dengan mengedepankan inovasi dan tanggung jawab lingkungan.</p>
+                <h2>Sejarah Kami</h2>
+                <p>Perjalanan kami dimulai dengan tim kecil yang penuh dedikasi yang percaya bahwa energi adalah kunci kemajuan dan kesejahteraan. Selama dua dekade, kami telah berkembang menjadi perusahaan besar dengan lebih dari 1.000 profesional yang berkompeten dan berkomitmen untuk memberikan yang terbaik di setiap proyek.</p>
             </article>
         </section>
         <!--Message Us Content-->
@@ -106,7 +112,7 @@
         <br>
         <br>
     </main>
-    <footer></footer>
+    <footer>Created by Fairuz.</footer>
     <script src="js/script.js"></script>
 </body>
 </html>

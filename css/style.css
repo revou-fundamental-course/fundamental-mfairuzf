@@ -6,9 +6,9 @@ body {
     padding: 0px;
 }
 main {
-
     background-color: #f2f2f2;
 }
+/*untuk logo*/
 .logo-icon {
     margin-left: 20px;
     width: 50px;
@@ -24,7 +24,7 @@ main {
     align-items: center;
     gap: 2px;
     margin-top: 12px;
-    margin-right: 850px;
+    margin-right: 1000px;
     margin-bottom: 12px;
     font-weight: bold;
 }
@@ -36,6 +36,7 @@ main {
     position: fixed;
     width: 100%;
     background: linear-gradient(45deg, rgb(0, 183, 255), rgb(144, 0, 255));
+    z-index: 1000;
 }
 nav>a {
     background: rgb(174, 216, 198);
@@ -44,63 +45,58 @@ nav>a {
     padding-right: 32px;
     border: 1px solid;
     text-decoration: none;
+    cursor: pointer;
 }
-.banner-web {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 500px;
-    background-image: url(../assets/welcomeimage.jpg);
-    background-size: cover;
-    background-position: center;
-}
-.banner-web::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1
+nav>a:hover {
+    background-color: rgb(144, 182, 166);
 }
 #web-font-title {
     font-size: 50px;
     font-family: verdana;
+    text-align: center;
 }
 #web-font-contents {
     font-size: 25px;
     font-family: "lucida console";
     text-align: center;
 }
-#profile-font-title {
-    text-align: center;
-    font-size: 35px;
+/*untuk autoslide show*/
+.banner-web {
+    position: relative;
+    height: 700px;
+    overflow: hidden;
 }
-#portfolio-font-title {
-    text-align: center;
-    font-size: 35px;
+
+.slider {
+    display: flex;
+    width: 100%;
+    height: 500px;
+    transition: transform 1s ease-in-out;
 }
-#message-font-title {
-    text-align: center;
-    font-size: 35px;
+
+.slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
 }
+
 #font-title {
     font-family: verdana;
 }
 #font-contents {
     font-family: "lucida console";
 }
-#username {
-    color: rgb(0, 0, 0);
+/* our profile */
+#our-profile {
+    background-color: #767ca4;
 }
-.banner-container {
-    height: 350px;
-    width: 100%;
-    border: 1px solid;
+#profile-font-title {
+    text-align: center;
+    font-size: 35px;
 }
-hr {
-    border: 1px solid black;
-}
+/* menunjukkan icon profile */
 .profile-icon {
     width: 250px;
     height: 250px;
@@ -117,6 +113,7 @@ hr {
     background-image: url(../assets/profile3.jpg);
 }
 .profile-item {
+    font-family: verdana;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
@@ -127,12 +124,21 @@ hr {
     display: flex;
     justify-content: space-around;
 }
-.divider {
-    flex: 2;
+#about-us {
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #ffffff;
 }
-.portfolio-icon {
+#about-us-font-title {
+    font-family: verdana;
+    color: #f20000;
+    text-align: center;
+    font-size: 35px;
+}
+/* icon about us */
+.about-us-icon {
     width: 250px;
-    height: 2   50px;
+    height: 250px;
     background-color: white;
     background-size: cover;
     border-radius: 50%;
@@ -145,10 +151,21 @@ hr {
     display: table;
     clear: both;
 }
+/* message us */
+#message-us {
+    background-color: #a073c5;
+}
+#message-font-title {
+    font-family: verdana;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 35px;
+}
 .container {
     display: flex;
     margin-left: 25px;
 }
+/*form*/
 form {
     background-color: rgb(222, 222, 222);
     width: 50%;
@@ -162,6 +179,7 @@ label {
     width: 150px;
     font-weight: bold;
 }
+/* pesan */
 input[type="text"], input[type="date"], textarea {
     background-color: #d7d7d7;
     width: calc(100% - 160px);
@@ -173,6 +191,7 @@ input[type="text"], input[type="date"], textarea {
 textarea {
     height: 100px;
 }
+/* tombol submit */
 input[type="submit"] {
     width: 100%;
     padding: 10px;
@@ -185,6 +204,7 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #6c6c6c;
 }
+/* hasil submit */
 .result {
     background-color: rgb(222, 222, 222);
     width: 50%;
@@ -196,7 +216,9 @@ input[type="submit"]:hover {
 .result p {
     margin: 5px 0;
 }
+/* footer */
 footer {
+    font-family: "lucida console";
     background-color: #34484f;
     color: #fff;
     text-align: center;
@@ -204,4 +226,141 @@ footer {
     bottom: 0;
     width: 100%;
     height: 25px;
+}
+/* media queries */
+
+/*tablet*/
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: white;
+        border-top: 1px solid #ccc;
+    }
+    nav.active {
+        display: flex;
+    }
+    nav>a {
+        padding: 10px;
+        text-align: center;
+        border: none;
+        border-bottom: 1px solid #ccc;
+    }
+    nav>a:last-child {
+        border-bottom: none;
+    }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        padding: 15px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .hamburger .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: black;
+        transition: 0.4s;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+/*mobile L*/
+@media (max-width: 576px) {
+    .logo-name {
+        font-size: 1.5em;
+    }
+    #web-font-title {
+        font-size: 30px;
+    }
+    #web-font-contents {
+        font-size: 18px;
+    }
+    .profile-icon {
+        width: 100px;
+        height: 100px;
+    }
+    .profile-item {
+        font-size: 16px;
+    }
+    .banner-web {
+        height: 400px;
+    }
+    .slider {
+        height: 300px;
+    }
+}
+/*mobile M*/
+@media (max-width: 375px) {
+    .logo-name {
+        font-size: 1.2em;
+    }
+    #web-font-title {
+        font-size: 25px;
+    }
+    #web-font-contents {
+        font-size: 14px;
+    }
+    .profile-icon {
+        width: 80px;
+        height: 80px;
+    }
+    .profile-item {
+        font-size: 14px;
+    }
+    .banner-web {
+        height: 300px;
+    }
+    .slider {
+        height: 200px;
+    }
+    form, .result {
+        width: 100%;
+    }
+}
+/*mobile S*/
+@media (max-width: 320px) {
+    .logo-name {
+        font-size: 1em;
+    }
+    #web-font-title {
+        font-size: 20px;
+    }
+    #web-font-contents {
+        font-size: 12px;
+    }
+    .profile-icon {
+        width: 60px;
+        height: 60px;
+    }
+    .profile-item {
+        font-size: 12px;
+    }
+    .banner-web {
+        height: 200px;
+    }
+    .slider {
+        height: 150px;
+    }
+    nav>a {
+        padding: 8px;
+        font-size: 14px;
+    }
+    .hamburger .bar {
+        width: 20px;
+    }
 }
